@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Excercise</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</head>
+
+<link rel="stylesheet" href="./css/nav.css">
+
+<script src="./scripts/nav.js"></script>
+
+<style>
+    body{
+        margin: auto;
+    }
+    .main{
+        padding: 5%;
+    }
+    .card{
+        background-color: #fac4c0;
+        border: none;
+        padding: 3%;
+        margin: auto;
+        display: flex;
+        text-align: center;
+        width: 75%;
+        justify-content: center;
+        row-gap: 2rem;
+    }
+    .card-child{
+        border: 2px solid #ff483b;
+        border-radius: 20px;
+        margin: auto;
+        width: 70%;
+        padding: 3%;
+        background-color: #fc9c95;
+    }
+    .card-child a{
+        text-decoration: none;
+    }
+    .card-child:hover{
+        background-color: #fca76a;
+    }
+</style>
+
+<body>
+
+    <div class="main">
+        <form>
+        <div class="card">
+            <h1>BMI Index Calculator</h1>
+            <div class="card-child">
+                <h4>Enter your Age</h4>
+                <div class="content">
+                    <input type="number" name="name" id="name">
+                </div>
+            </div>
+            <div class="card-child">
+            <h4>Select your Gender</h4>
+            <div class="content">
+                <input type="radio" name="gen-f"><label for="gen-f">Female</label>
+                <input type="radio" name="gen-m"><label for="gen-m">Male</label>
+            </div>
+            </div>
+            <div class="card-child">
+            <h4>Enter your Weight in Kg</h4>
+            <div class="content">
+                <input type="number" name="weight" id="weight">
+            </div>
+            </div>
+            <div class="card-child">
+            <h4>Enter your Height in cm</h4>
+            <div class="content">
+                <input type="number" name="height" id="height">
+            </div>
+            </div>
+            
+            <input type="submit" name="submit" class="btn btn-primary" onclick="result()">
+
+        </div>
+        </form>
+        <script src="/scripts/rec.js"></script>
+    </div>
+</body>
+</html>
