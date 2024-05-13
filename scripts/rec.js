@@ -1,22 +1,24 @@
+function result() {
 
+  var form_ele = document.forms.bmi_form;
 
-cont.write(recs);
+  var formD = new FormData(form_ele);
 
-const weight = document.getElementById("weight").value;
-const height = document.getElementById("height").value; // Height in centimeters
-const age = document.getElementById("age").value;
+  var age = formD.get('age')
+  var height = formD.get('height')
+  var weight = formD.get('weight') 
 
-function result(weight, height, age) {
-
-  const heightInMeters = height / 100; // Convert height from cm to meters
-  const bmi = weight / (heightInMeters * heightInMeters);
+  var heightInMeters = height / 100; // Convert height from cm to meters
+  var bmi = weight / (heightInMeters * heightInMeters);
   
 
-  const roundedBMI = bmi.toFixed(1);
+  var roundedBMI = bmi.toFixed(1);
 
-  return parseFloat(roundedBMI);
   document.write(`<divclass="card"><h2>Your BMI is ${parseFloat(roundedBMI)}<h2></div>`)
+  
 }
+
+
 
 
  // Age in years
